@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>informasi belanja produk di nirwan collection</title>
+    <link rel="stylesheet" href="GAYA.css">
+    <link href='https://fonts.googleapis.com/css?family=Latto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    
+<header id="header">
+    <h1>NIRWAN COLLECTION</h1>
+</header>
+
+<nav id="nav">
+    <ui>
+        <a href="#"> <li>Home</li></a>
+        <a href="#"><li>About</li></a>
+        <a href="#"><li>Contact</li></a>
+        <a href="#"> <li>Blog</li></a>
+    </ui>
+</nav>
+
+<main id="main">
+    <h1>SELAMAT DATANG DI WEB RESMI KAMI</h1>
+    <p>Informasi belanja termurah dan terpercaya</p>
+</main>
+
+<aside id="aside">
+    ini adalah aside
+</aside>
+<article id="article">
+    ini adalah artikel
+</article>
+
+
+<footer id="footer">
+    <p></p>
+</footer>
+<table>
+<thead>
+ <tr>
+ <th>Nama Barang</th>
+ <th>Seri</th>
+<th>Harga</th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+ <td>1 BAJU</td>
+ <td>2020</td>
+ <td>Rp.50000</td>
+ </tr>
+ <tr>
+ <td>2 Jeans</td>
+ <td>5A </td>
+ <td>Rp.150000</td>
+ </tr>
+ Daftar
+</tbody>
+</table>
+</body>
+</html>
