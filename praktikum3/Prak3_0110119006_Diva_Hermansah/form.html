@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+</head>
+<body>
+<center>
+	<h1>Form Pembelian Tiket</h1>
+</center>
+<form action="">
+        <fieldset>
+        	<legend>Data diri</legend>
+        	<p>
+            <label>No Ktp:</label>
+            <input type="text" name="No_Ktp" placeholder="No Ktp"/>
+        </p>
+        <p>
+            <label>Nama Lengkap:</label>
+            <input type="text" name="Nama_Lengkap" placeholder="Nama Lengkap"/>
+        </p>
+        <p>
+            <label>No Telp:</label>
+            <input type="No Telp" name="No_Telp" placeholder="No Telp"/>
+        </p>
+        <p>
+            <label>Tempat tanggal lahir:</label>
+            <input type="Ttl" name="Ttl" placeholder="Ttl"/>
+            <input type="Date" name="Tgl" placeholder="Tgl"/>
+        </p>
+        <p>
+            <label>Jenis kelamin:</label>
+            <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
+            <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
+        </p>
+       
+        <p>
+            <label>Alamat:</label>
+            <textarea name="Alamat"></textarea>
+        </p>
+        </fieldset>
+        <fieldset>
+        	<legend>Data pemesanan tiket</legend>
+        	<p>
+            <label>Stasiun Asal dan tujuan:</label>
+            <select name="Stasiun">
+                <option value="Bekasi">Bekasi - Jogja = Rp.125.000,-</option>
+                <option value="Jakarta">Jakarta - Jogja = Rp.150.000,-</option>
+                <option value="Bandung">Bandung - Jogja = Rp.125.000,-</option>
+                <option value="Surabaya">Surabaya - Jogja = Rp.175.000,-</option>
+            </select>
+        </p>
+         <p>
+            <label>Jumlah Tiket:</label>
+            <select name="jmltiket">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </p>
+         <p>
+            <a href="index.php"><input type="submit" name="submit" value="Pesan Tiket"/></a>
+        </p>
+        </fieldset>
+</form>
+</body>
+</html>
