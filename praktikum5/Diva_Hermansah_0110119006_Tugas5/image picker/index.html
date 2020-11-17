@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <style>
+        select{
+            width: 100px;
+        }
+        .box{ 
+            border-radius: 5px;            
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-items: start;
+            background-color:white;
+            width: 50%;
+            margin: 30px auto;
+        }
+        .font{
+            font-family: 'Orbitron', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <center>
+            <h1 class="font">Image Picker Cars</h1>
+            <select id="select" onchange="pick_image()">
+                <option value="#">Pilih Gambar</option>
+                <option value="mercedes.jpg">Mercedes Benz AMG GT R</option>
+                <option value="pagani.jpg">Pagani Huayra</option>
+                <option value="rr.jpg">Rolls Royce</option>
+                <option value="subarubrz.jpg">Subaru BRZ</option>
+                <option value="mclaren.jpg">Mclaren 600LT</option>
+                <option value="teslax.jpg">Tesla Model X</option>
+            </select>
+        </center>
+        <br> 
+        <img src="" alt="" width="100%" id="gambar">
+    </body>
+    <script>
+        function pick_image(){
+            var x = document.getElementById("select").value;
+            var y = document.getElementById("gambar").src = "gambar/"+x;
+            alert(x);
+            
+        }
+    </script>
+    </html>

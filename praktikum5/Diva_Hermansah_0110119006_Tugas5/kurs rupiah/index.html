@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <legend>
+        <table>
+            <thead>
+                <th>Masukan nilai</th>
+                <th>Valas</th>
+                <th>Nilai rupiah</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input id="nilai-mata-uang-asing" />
+                    </td>
+                    <td>
+                        <select id="valas">
+                            <option value="usd">USD</option>
+                            <option value="sgd">SGD</option>
+                            <option value="ringgit">RINGGIT</option>
+                            <option value="yen">YEN</option>
+                            <option value="euro">EURO</option>
+                            <option value="riyal">RIYAL</option>
+                        </select>
+                    </td>
+                    <td>
+                        <span id="nilai-mata-uang-rupiah"></span>
+                    </td>
+                    <td>
+                        <button onclick="hitung();">Hitung</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </legend>
+</body>
+<script>
+    function hitung(e) {
+        var rupiah = document.getElementById('nilai-mata-uang-rupiah')
+        var asing = document.getElementById('nilai-mata-uang-asing')
+        var valas = document.getElementById('valas')
+        
+        var text
+        switch (valas.value) {
+            case 'usd':
+            rupiah.innerHTML = ""
+            text = document.createTextNode(+asing.value * 9915)
+            rupiah.appendChild(text)
+            break;
+            
+            case 'sgd':
+            rupiah.innerHTML = ""
+            text = document.createTextNode(+asing.value * 13472)
+            rupiah.appendChild(text)
+            break;
+            
+            case 'ringgit':
+            rupiah.innerHTML = ""
+            text = document.createTextNode(+asing.value * 874)
+            rupiah.appendChild(text)
+            break;
+            
+            case 'yen':
+            rupiah.innerHTML = ""
+            text = document.createTextNode(+asing.value * 120)
+            rupiah.appendChild(text)
+            break;
+            
+            case 'euro':
+            rupiah.innerHTML = ""
+            text = document.createTextNode(+asing.value * 15888)
+            rupiah.appendChild(text)
+            break;
+            
+            case 'riyal':
+            rupiah.innerHTML = ""
+            text = document.createTextNode(+asing.value * 3592)
+            rupiah.appendChild(text)
+            break;
+            
+            default:
+            break;
+        }
+    }
+</script>
+</html
