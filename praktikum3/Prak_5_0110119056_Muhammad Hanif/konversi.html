@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi UANG</title>
+    <script src="konversi.js"></script>
+    <style>
+        
+        table{
+            margin: 10% auto;
+            background-color: antiquewhite;
+            border: 1px solid black;
+        }
+        thead{
+            text-align: center;
+            font-size: 17px;
+            background-color: goldenrod;
+        }
+        input{
+            
+            transition: 1s;
+        }
+        
+    </style>
+</head>
+<body>
+         <h3>Created By Muhammad Hanif</h3>
+         <h4>
+            Kurs Rupiah : <br>
+            ● 1 Dollar US ---- 9.915 rupiah<br>
+            ● 1 Dollar Singapore ---- 13.472 rupiah<br>
+            ● 1 Ringgit Malaysia ---- 874 rupiah<br>
+            ● 1 Yen Jepan ---- 120 rupiah<br>
+            ● 1 Euro  ---- 15.888 rupiah<br>
+            ● 1 Riyal Arab Saudi ---- 3.592 rupiah<br>
+         </h4>
+            <table>
+            <thead>
+                <td>Masukkan Nilai</td>
+                <td>Valas</td>
+                <td>Nilai Rupiah</td>
+            </thead>
+            <tbody>
+                <td> <input type="text" id="in" onchange="myFunction()" onmousemove="myFunction()" /> </td>
+                <td> 
+                    <select id="mySelect" onchange="myFunction()" onmousemove="myFunction()">
+                        <option value="9.915">Dollar US</option>
+                        <option value="13.472">Dollar Singapore</option>
+                        <option value="874"> Ringgit Malaysia</option>
+                        <option value="120">Yen Jepan</option>
+
+                        <option value="15.888">Euro</option>
+                        <option value="3.592"> Riyal Arab Saud</option>
+                      </select>     
+                </td>
+                <td>
+                    <input type="text" id="out" value="Rp.0" />   
+                </td>
+               
+            </tbody>
+        </table>
+    
+    
+        
+        </form>
+        <script>
+            function myFunction() {
+              var z =  document.getElementById("in").value;
+              var x = document.getElementById("mySelect").value;
+              document.getElementById("out").value = "Rp. " + Number( x * z );
+            }
+            </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Belajar Form Validation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+       form{
+           background-color:seashell;
+           padding: 5% ;
+           border-radius: 5% 0;
+       }
+       button{
+         transition: 1s;
+         animation-duration: 2s;
+       }
+       button:hover{
+           transform : scale(1.3);
+       }
+       .container{
+           margin-top: -4%;
+            transform: scale(0.8);
+          
+       }
+    </style>
+    
+</head>
+<body>
+        <script>
+        function validateForm() {
+            var nama = document.forms["formPendaftaran"]["nama"].value;
+                var email = document.forms["formPendaftaran"]["email"].value;
+                var jam = document.forms["formPendaftaran"]["time"].value;
+                var tujuanV = document.forms["formPendaftaran"]["tujuan"].value;
+                var jumlah = document.forms["formPendaftaran"]["jumlah"].value;
+
+            // if (nama == ""  && email == "" && jam == "" && tujuanV == "" && jumlah == "" ) {
+            //     alert("Nama Tidak Boleh Kosong");
+            //     document.forms["formPendaftaran"]["nama"].focus();
+            //     return false;    
+            var number=/^[0-9]+$/;
+            if (nama == "") {
+                alert("Nama Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["nama"].focus();
+                return false;
+            } if (email == "") {
+                alert("Email Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["email"].focus();
+                return false;
+            } if (jam == "") {
+                alert("Jam Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["jam"].focus();
+                return false;
+            } if (tujuanV == "") {
+                alert("Tujuan keberangkatan Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["tujuan"].focus();
+                return false;
+            } if (jumlah == "" && !jumlah.match(number)) {
+                alert("Jumlah tiket Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["jumlah"].focus();
+                return false;
+            }else{
+               
+            
+                document.getElementById("demo").innerHTML =  "Nama : " +  document.forms["formPendaftaran"]["nama"].value;   
+                document.getElementById("demo2").innerHTML =  "Email : " + document.forms["formPendaftaran"]["email"].value;   
+                document.getElementById("demo3").innerHTML =  "Jam Keberangkatan : " + document.forms["formPendaftaran"]["time"].value;   
+                document.getElementById("demo4").innerHTML =  "Tujuan Keberangkatan : " + document.forms["formPendaftaran"]["tujuan"].value;   
+                document.getElementById("demo5").innerHTML =  "Jumlah tiket : " + document.forms["formPendaftaran"]["jumlah"].value;  
+            return false;
+            }  
+            
+           
+        }
+
+        function refreshF(){
+            location.reload(); 
+        }
+    </script>
+    
+    
+    <div class="container">
+        <div class="alert alert-warning" role="alert">
+            Untuk menampilkan Hasil Outputnya Harap mengganti isi dari syntax form action="Sesuai tempat folder/server ataupun localserver diletakkan file ini"
+            <img src="img/petunjuk.PNG" alt="gamabar_petunjuk" style="transform: scale(0.9); width: 80; ;">
+          </div>
+        <br>
+        <form name="formPendaftaran" action="http://127.0.0.1:5500/FormValidation.html"  method="POST"  onsubmit="return validateForm()">
+            <h2>Form Validasi By Muhammad Hanif</h2>
+            <hr>
+            <div class="form-group">
+                <label>Nama</label>
+                <input type="text" name="nama" placeholder="Nama lengkap" id="nama" class="form-control" maxlength="30" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Email Aktif" class="form-control" required>
+                <small id="emailHelp" class="form-text text-muted">Email Akan Digunakan Untuk Mengirimkan Notifikasi.</small>
+            </div>
+            <div class="form-group">
+                <label>Jam Keberangkatan</label>
+                <input type="time" name="time" placeholder="Jam keberangkatan" class="form-control"min="00:00" max="23.59" required>
+           </div>
+           <div class="form-group">
+            <label>Tujuan Keberangkatan</label>
+            <input type="text" name="tujuan" placeholder="Tujuan keberangkatan"  class="form-control"  required>
+        </div>
+        <div class="form-group">
+            <label>Jumlah Tiket</label>
+            <input type="number" name="jumlah" placeholder="Tujuan keberangkatan" class="form-control" min="0" max="10" required>
+        </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <INPUT TYPE="button" class="btn btn-info" onClick="history.go(0)" VALUE="Refresh">
+                
+        </form>
+        <br>
+          
+          <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Output</h4>
+            <p id="demo"></p>
+            <p id="demo2"></p>
+            <p id="demo3"></p>
+            <p id="demo4"></p>
+            <p id="demo5"></p>
+          
+          </div>
+
+       
+    </div>
+    
+    
+ 
+</body>
+</html>
