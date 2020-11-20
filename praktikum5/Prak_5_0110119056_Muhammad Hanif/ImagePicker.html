@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <style>
+        .container{
+            border-radius: 5% 0;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-items: start;
+            box-shadow: 3px 3px 10px black;
+            background-color: azure;
+            gap: 5px;
+            width: 50%;
+            /* height: 50%; */
+            margin: 30px auto;
+        }
+        select{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Created By Muhammad Hanif</h2>
+        <h5>Image Picker</h5>
+        <select id="mySelect" onchange="pick_F()">
+            <option value="#">Pilih Gambar</option>
+            <option value="1_setupCom.jpg">1_setupCom</option>
+            <option value="2_setupCom.jpg">2_setupCom</option>
+            <option value="3_setupCom.jpg">3_setupCom</option>
+            <option value="4_setupCom.jpg">4_setupCom</option>
+            <option value="5_setupCom.jpg">5_setupCom</option>
+            <option value="6_setupCom.jpg">6_setupCom</option>
+            <option value="7_ariel.jpg">7_ariel</option>
+          </select>
+        <!-- <br> -->
+    
+        <img src="" alt="" width="50%" id="gambar">
+    
+    <script>
+        function pick_F(){
+            var y = document.getElementById("mySelect").value;
+            var x = document.getElementById("gambar").src = "img/"+y;
+            alert(y);
+            
+        }
+    </script>
+</body>
+</html>
