@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Message</title>
+    <style>
+        table{
+            transform: scale(1.5);
+        }
+        table{
+            box-shadow: 1px 1px 10px 3px black;
+            margin: 50px auto;
+            width: 300px;
+            /* border: 1px solid black; */
+            background-color: antiquewhite;
+        }
+        #cb{
+            border: 1px solid black;
+            display: flex;
+            align-items: flex-start;
+
+            justify-content: flex-start;
+            height: 200px;
+            /* border: 1px solid black; */
+            
+        }
+        #it{
+            width: 100%;
+        }
+        p{
+            padding: 10px;
+        }
+        td{
+            padding: 10px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h3>Created By Muhammad Hanif</h3>
+
+    <table>
+        <tr>
+            <td id="cb">
+               
+                <!-- <p id="chatbox">s</p> -->
+            </td>
+        </tr>
+        <tr>
+            <td >
+                <input type="text" id="in" style="width: 70%;">
+                <input type="button" id="btn_kirim" value="Kirim" onclick="chatF()" style="width: 26%;">
+            </td>
+        </tr>
+        
+    </table>
+    <script>
+        function chatF(){
+            document.getElementById('cb').innerHTML += document.getElementById("in").value +  "<br>";
+        }
+    </script>
+</body>
+</html>
