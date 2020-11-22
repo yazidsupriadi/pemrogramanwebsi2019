@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatmessage</title>
+    <style>
+        table {
+            margin: 50px auto;
+            width: 300px;
+            background-color: white;
+        }
+        
+        #chatbox {
+            border: 1px solid black;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Chat Message</h1>
+    <h4>Created by Abdurrauf Zahid Hanafi</h4>
+    <hr>
+    <br>
+    <table>
+        <tr id="chatbox">
+
+        </tr>
+    </table>
+    <table>
+        <td>
+            <input type="text" id="box">
+            <input type="button" id="btn_kirim" value="send" onclick="chatting()" style="width: 50px;">
+        </td>
+    </table>
+    <script>
+        function chatting() {
+            document.getElementById("chatbox").innerHTML += document.getElementById("box").value + "<br>";
+        }
+    </script>
+
+</body>
+
+</html>

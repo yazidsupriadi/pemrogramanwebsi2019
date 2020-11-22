@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+
+<body>
+    <h1>Image Picker</h1>
+    <h4>Created by Abdurrauf Zahid Hanafi</h4>
+    <hr>
+    <br>
+    <div class="box">
+        <select id="selectId" onchange="changeimg()">
+            <option value="#">Choose You're Image</option>
+            <option value="g1.jpg">g1</option>
+            <option value="g2.jpg">g2</option>
+            <option value="g3.png">g3</option>
+            <option value="g4.png">g4</option>
+            <option value="g5.jpg">g5</option>
+        </select>
+        <br>
+        <img src="" alt="" width="50%" id="image">
+    </div>
+    <script>
+        function changeimg() {
+            var y = document.getElementById("selectId").value;
+            var x = document.getElementById("image").src = "image/" + y;
+            alert(y);
+        }
+    </script>
+
+
+</body>
+
+</html>

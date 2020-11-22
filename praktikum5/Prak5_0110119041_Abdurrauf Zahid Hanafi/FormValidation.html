@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>From Validation</title>
+    <link rel="stylesheet" href="">
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <h1> Form Validation</h1>
+    <h4>Created by Abdurrauf Zahid Hanafi</h4>
+    <hr>
+    <br>
+    <form name="formPendaftaran" action="http://127.0.0.1:5500/FormValidation.html" method="POST" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label>Nama</label>
+            <input type="text" name="nama" placeholder="Nama lengkap" id="nama" class="form-control" maxlength="30" required>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Email Anda" class="form-control" required>
+            <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+        <div class="form-group">
+            <label>Keberangkatan</label>
+            <input type="time" name="time" placeholder="Jam keberangkatan" class="form-control" min="00:00" max="23.59" required>
+        </div>
+        <div class="form-group">
+            <label>Tujuan Keberangkatan</label>
+            <input type="text" name="tujuan" placeholder="Tujuan keberangkatan" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>Jumlah Tiket</label>
+            <input type="number" name="jumlah" placeholder="Tujuan keberangkatan" class="form-control" min="0" max="10" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <INPUT TYPE="button" class="btn btn-info" onClick="history.go(0)" VALUE="Refresh">
+
+    </form>
+    <br>
+
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Output</h4>
+        <p id="g"></p>
+        <p id="g1"></p>
+        <p id="g2"></p>
+        <p id="g3"></p>
+        <p id="g4"></p>
+
+    </div>
+
+
+    </div>
+    <script>
+        function validateForm() {
+            var nama = document.forms["formPendaftaran"]["nama"].value;
+            var email = document.forms["formPendaftaran"]["email"].value;
+            var jam = document.forms["formPendaftaran"]["time"].value;
+            var tujuanV = document.forms["formPendaftaran"]["tujuan"].value;
+            var jumlah = document.forms["formPendaftaran"]["jumlah"].value;
+
+
+            var number = /^[0-9]+$/;
+            if (nama == "") {
+                alert("tidak boleh kosong");
+                document.forms["formPendaftaran"]["nama"].focus();
+                return false;
+            }
+            if (email == "") {
+                alert("");
+                document.forms["formPendaftaran"]["email"].focus();
+                return false;
+            }
+            if (jam == "") {
+                alert("");
+                document.forms["formPendaftaran"]["jam"].focus();
+                return false;
+            }
+            if (tujuanV == "") {
+                alert("");
+                document.forms["formPendaftaran"]["tujuan"].focus();
+                return false;
+            }
+            if (jumlah == "" && !jumlah.match(number)) {
+                alert("");
+                document.forms["formPendaftaran"]["jumlah"].focus();
+                return false;
+            } else {
+
+
+                document.getElementById("g").innerHTML = "Nama : " + document.forms["formPendaftaran"]["nama"].value;
+                document.getElementById("g1").innerHTML = "Email : " + document.forms["formPendaftaran"]["email"].value;
+                document.getElementById("g2").innerHTML = "Jam Keberangkatan : " + document.forms["formPendaftaran"]["time"].value;
+                document.getElementById("g3").innerHTML = "Tujuan Keberangkatan : " + document.forms["formPendaftaran"]["tujuan"].value;
+                document.getElementById("g4").innerHTML = "Jumlah tiket : " + document.forms["formPendaftaran"]["jumlah"].value;
+                return false;
+            }
+
+
+        }
+
+        function refreshF() {
+            location.reload();
+        }
+    </script>
+
+
+
+</body>
+
+</html>

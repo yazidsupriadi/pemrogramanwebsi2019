@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Mata Uang</title>
+    <style>
+        table {
+            border: 10px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kurs Mata Uang</h1>
+    <h4>Created by Abdurrauf Zahid Hanafi</h4>
+    <hr>
+    <table>
+        <td>
+            <Input type="number" class="input" id="nama">
+            <Select class="kurs">
+        <option value="USD">USD - 9.915</option>
+        <option value="SGD">SGD - 13.472</option>
+        <option value="RM">RM - 874</option>
+        <option value="YEN">YEN - 120</option>
+        <option value="EUR">EUR - 15.888</option>
+        <option value="SAR">SAR- 3.592</option>
+    </Select>
+            <textarea placeholder="hasil" class="hasil"></textarea>
+        </td>
+    </table>
+    <button class="hitung">Hitung</button>
+
+    <script>
+        const input = document.querySelector(".input");
+        const kursSelect = document.querySelector(".kurs")
+        const hitungBtn = document.querySelector(".hitung");
+        const hasil = document.querySelector(".hasil")
+
+
+        hitungBtn.addEventListener("click", function() {
+            if (kursSelect.value == "USD") {
+                hasil.innerHTML = " " + input.value * 9.915;
+            } else if (kursSelect.value == "SGD") {
+                hasil.innerHTML = " " + input.value * 13.472;
+            } else if (kursSelect.value == "RM") {
+                hasil.innerHTML = " " + input.value * 874;
+            } else if (kursSelect.value == "YEN") {
+                hasil.innerHTML = " " + input.value * 120;
+            } else if (kursSelect.value == "EUR") {
+                hasil.innerHTML = " " + input.value * 15.888;
+            } else if (kursSelect.value == "SAR") {
+                hasil.innerHTML = " " + input.value * 3.592;
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>
