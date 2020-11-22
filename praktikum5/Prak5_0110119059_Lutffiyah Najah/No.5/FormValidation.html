@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .sukses {
+            visibility: hidden;
+        }
+        
+        .error {
+            visibility: visible;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <table>
+                <legend>Form Validation</legend>
+                <tr>
+                    <td><label for="nama">Nama Pelanggan :</label></td>
+                    <td><input type="text" id="nama">
+                        <span class="sukses"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email :</label></td>
+                    <td><input type="email" id="email">
+                        <span class="sukses"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="jam">Jam Keberangkatan :</label></td>
+                    <td><input type="time" id="jam">
+                        <span class="sukses"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="tujuan">Tujuan Keberangkatan :</label></td>
+                    <td><input type="text" id="tujuan">
+                        <span class="sukses"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="tiket">Jumlah Tiket :</label></td>
+                    <td><input type="text" id="tiket" min="1" max="10">
+                        <span class="sukses"></span></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" id="submit">SUBMIT</button></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+    <div id="hasil">
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
