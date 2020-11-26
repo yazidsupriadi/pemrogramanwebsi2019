@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{margin: auto; background-color: rgb(180, 255, 255);}
+    </style>
+</head>
+<body>
+    <style>
+        body{font: 12px verdana;}
+    </style>
+    <fieldset>
+        <legend><h3>Kurs Rupiah - Mata Uang Asing</h3></legend>
+        <table border="1">
+            <thead>
+                <th><label for="nama">Masukkan Nilai</label></th>
+                <th><label for="kurs">Mata Uang</label></th>
+                <th><label for="hasil">Nilai Rupiah</label></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" class="input" id="nama"></td>
+                    <td><select class="kurs">
+                            <option value="usd">Dollar US</option>
+                            <option value="sgd">Dollar Singapore</option>
+                            <option value="rm">Ringgit Malaysia</option>
+                            <option value="yj">Yen Jepang</option>
+                            <option value="euro">Euro</option>
+                            <option value="ras">Riyal Arab Saudi</option>
+                        </select></td>
+                    <td><input type="number" class="hasil" readonly></td>
+                </tr>
+            </tbody>
+                
+        </table>
+    </br>
+        <button class="hitung">Hitung</button>
+        
+    </fieldset>
+    
+
+    <script>
+        const input = document.querySelector(".input");
+        const kursSelect = document.querySelector(".kurs");
+        const hitungBtn = document.querySelector(".hitung");
+        const hasil = document.querySelector(".hasil");
+
+        hitungBtn.addEventListener("click", function() {
+            if (kursSelect.value == "usd") {
+                hasil.value = input.value * 9915;
+            }
+            else if (kursSelect.value == "sgd") {
+                hasil.value = input.value * 13472;
+            }
+            else if (kursSelect.value == "rm") {
+                hasil.value = input.value * 874;
+            }
+            else if (kursSelect.value == "yj") {
+                hasil.value = input.value * 120;
+            }
+            else if (kursSelect.value == "euro") {
+                hasil.value = input.value * 15888;
+            }
+            else if (kursSelect.value == "ras") {
+                hasil.value = input.value * 3592;
+            }
+        })
+    </script>
+    
+</body>
+</html>

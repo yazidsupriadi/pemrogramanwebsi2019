@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi</title>
+
+    <style>
+        form {
+            background-color: aqua;
+        }
+        #berhasil {
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <form name="validation" action="FormValidation.html" method="POST" onsubmit="return validasi()" >
+        <fieldset>
+            <div class="form">
+            <legend align="center"><h2>Form Validasi Keberangkatan</h2></legend>
+            <table align="center">
+                <tbody>
+                    <tr>
+                        <td><label>Nama Pelanggan</label></td>
+                        <td><input type="text" name="nama" id="nama" placeholder="Nama Anda"/></td>
+                    </tr>
+                    <tr>
+                        <td><label>Email</label></td>
+                        <td><input type="email" name="email" id="email" placeholder="Email Aktif"/></td>
+                    </tr>
+                    <tr>
+                        <td><label>Jam Keberangkatan</label></td>
+                        <td><input type="time" name="jamnya" id="jam" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Tujuan Keberangkatan</label></td>
+                        <td><input type="text" name="berangkat" id="tujuan" placeholder="Mau Kemana?"/></td>
+                    </tr>
+                    <tr>
+                        <td><label>Jumlah Tiket</label></td>
+                        <td><input type="number" name="jumlah" id="jumlah" placeholder="Berapa Tiket?"/></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" onclick="validasi()">Submit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </fieldset>
+    </form>
+</br>
+</br>
+    <div class="berhasil">
+        <table align="center">
+            <tr>
+                <td id="data"></td>
+            </tr>
+            <tr>
+                <td id="nama1"></td>
+            </tr>
+            <tr>
+                <td id="email1"></td>
+            </tr>
+            <tr>
+                <td id="jam1"></td>
+            </tr>
+            <tr>
+                <td id="tujuan1"></td>
+            </tr>
+            <tr>
+                <td id="jml1"></td>
+            </tr>
+        </table>
+    </div>
+    
+
+
+    <script type="text/javascript">
+        function validasi() {
+            var nama = document.getElementById("nama").value;
+            var email = document.getElementById("email").value;
+            var jam = document.getElementById("jam").value;
+            var tujuan = document.getElementById("tujuan").value;
+            var jumlah = document.getElementById("jumlah").value;
+            
+            if (nama == "") {
+                alert("Nama Harus Diisi");
+                document.validation.nama.focus();
+                return false;
+            } if (email == "") {
+                alert("Email Harus diisi");
+                document.validation.email.focus();
+                return false;
+            } if (jam == "") {
+                alert("Jam Keberangkatan Harus Diisi");
+                document.validation.jam.focus();
+                return false;
+            } if (tujuan == "") {
+                alert("Tujuan Keberangkatan Harus Diisi");
+                document.validation.tujuan.focus();
+                return false;
+            } if (jumlah == "") {
+                alert("Jumlah Tiket Harus Diisi");
+                document.validation.jumlah.focus();
+                return false;
+            }else{
+                document.getElementById("data").innerHTML = "<b>" + "DATA VALID" + "</b>";
+                document.getElementById("nama1").innerHTML = "Nama              : " + nama;
+                document.getElementById("email1").innerHTML = "Email            : " + email;
+                document.getElementById("jam1").innerHTML = "Jam Berangkat      : " + jam;
+                document.getElementById("tujuan1").innerHTML = "Tujuan Berangkat: " + tujuan;
+                document.getElementById("jml1").innerHTML = "Jumlah Tiket       : " + jumlah;
+                
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html> 

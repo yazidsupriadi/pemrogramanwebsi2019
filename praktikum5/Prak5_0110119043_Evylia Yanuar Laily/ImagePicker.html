@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+
+    <script>
+        function peliharaan() {
+            let gambar = document.getElementById("foto");
+            let hewan = document.getElementById("hewanpeliharaan");
+
+            if (!hewanpeliharaan.value == " ") {
+                gambar.innerHTML = `<img src="img/${hewanpeliharaan.value}.jpg"></img>`
+                alert(`Ini adalah Gambar ${hewanpeliharaan.value}`)
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <form action="">
+        <select name="hewanpeliharaan" id="hewanpeliharaan" onchange="peliharaan()">
+            <option value="">Pilih Gambar</option>
+            <option value="Anjing">Anjing</option>
+            <option value="Burung">Burung</option>
+            <option value="Ikan">Ikan</option>
+            <option value="Kelinci">Kelinci</option>
+            <option value="Kucing">Kucing</option>
+            <option value="Panda">Panda</option>
+            <option value="Tupai">Tupai</option>
+          </select>
+    </form>
+    </br>
+    <div id="foto"></div>
+    
+    
+</body>
+</html>

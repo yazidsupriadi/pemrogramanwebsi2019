@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Message</title>
+    <style>
+        #chatbox {
+            width: 800px;
+            height: 500px;
+            position: relative;
+            border: 1px solid black;
+        }
+        .chatan {
+            width: 800px;
+            height: 500px;
+            position: relative;
+            border: 1px solid black;
+        }
+        #isi {
+            padding: 2px;
+            bottom: 0px;
+            position: absolute;
+            width: 100%;
+        }
+        #chat {
+            font-family: verdana;
+            width: 700px;
+            height: 20px;
+        }
+        #kirim {
+            width: 70px;
+            height: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <table border="1" id="chatbox">
+        <thead class="chatan" font="verdana">
+        </thead>
+        <tbody id="isi">
+            <tr>
+                <td>
+                    <input type="text" id="chat">
+                    <input type="button" id="kirim" value="Kirim" onclick="Kirim()">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function Kirim(){
+            document.getElementById("chatbox").innerHTML += document.getElementById("chat").value +  "</br>";
+        }
+    </script>
+</body>
+</html>
