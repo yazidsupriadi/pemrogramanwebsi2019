@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form id="formVal" onsubmit="validation()">
+        <div>
+            <label>Nama</label>
+            <input type="text" id="nama" class="input" maxlength="30" required>
+        </div>
+        <br/>
+        <div>
+            <label>Email</label>
+            <input type="email" id="email" class="input" required>
+        </div>
+        <br/>
+        <div>
+            <label>Jam Keberangkatan</label>
+            <input type="time" id="waktu" class="input" min="00.00" max="23.59" required>
+        </div>
+        <br/>
+        <div>
+            <label>Tujuan Keberangkatan</label>
+            <input type="text" id="tujuan" class="input" required>
+        </div>
+        <br/>
+        <div>
+            <label>Jumlah Tiket</label>
+            <input type="number" id="tiket" class="input" min="0" max="10" required>
+        </div>
+        <br/><br/>
+        <button onkeyup="validation()" >Submit</button>
+    </form>
+    
+
+    <div>
+        <p>Hasil Validasi Form</p>
+        <p id="aOut" ></p>
+        <p id="bOut" ></p>
+        <p id="cOut"></p>
+        <p id="dOut"></p>
+        <p id="eOut"></p>
+    </div>
+
+    <script>
+        function validation() {
+
+            let a = document.getElementById("nama").value;
+            let b = document.getElementById("email").value;
+            let c = document.getElementById("waktu").value;
+            let d = document.getElementById("tujuan").value;
+            let e = document.getElementById("tiket").value;
+            
+            document.getElementById("aOut").innerHTML = "Nama : " + a;
+            document.getElementById("bOut").innerHTML = "Email : " + b;
+            document.getElementById("cOut").innerHTML = "Jam Keberangkatan : " + c;
+            document.getElementById("dOut").innerHTML = "Tujuan Keberangkatan : " + d;
+            document.getElementById("eOut").innerHTML = "Jumlah Tiket : " + e;
+        }
+    </script>
+
+</body>
+</html>
