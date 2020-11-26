@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style type="text/css">
+        body{
+          overflow-y: hidden;
+          margin:0;
+          padding: 0;
+          font-family:cursive;
+          background-color: #9d719ec5;
+        }
+        form{
+          font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+          background-color: rgb(255,255,255,0.7);
+          width: 300px;
+          margin: 180px auto;
+          padding: 40px;
+          text-align: right;
+          color: rgb(0, 0, 0);
+          border-radius: 40px 10px;
+          box-shadow: 2px 2px 7px #393939;
+        }
+        input{
+          margin: 7px;
+        }
+        input.login:hover{
+          background-color: #93A4B0;
+          color: #CDCDCD;
+        }
+        p{
+          text-align:center;
+          margin: 50px auto;
+          margin-top: 10px;
+          padding: 10px;
+          font-weight: bold;
+          color: black;
+          font-family: verdana;
+          background-color: rgb(195, 0, 255);
+          border-radius: 20px;
+        }
+      </style>
+</head>
+<body style="text-align: center;">
+    <form name=form>
+<p>Login</p>
+        <tr>
+            <td>Username</td>
+            <input type="text" name="username" placeholder="Masukkan Username"><br><br>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <input type="password" name="password" placeholder="Masukkan Password"><br><br>
+        </tr>
+        <tr>
+            <input type="submit" value="Login" onclick="login()">
+        </tr>
+    </form>
+
+    <script src="otentikasi.js"></script>
+</body>
+</html>

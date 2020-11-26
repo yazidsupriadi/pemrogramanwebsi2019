@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Message</title>
+    <style>
+        .result_chat 
+        {
+            width: 605px;
+            height : 400px;
+            border: 1px solid black;
+            margin-bottom: 1rem;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">Chat Message</h1>
+        <hr>
+    </header>
+
+    <main>
+        <div class="result_chat"></div>
+        <div>
+            <input type="text" class="input_chat" style="width: 550px;">
+            <button class="button">Kirim</button>
+        </div>
+    </main>
+
+    <script>
+        let result = document.querySelector(".result_chat");
+        const input = document.querySelector(".input_chat");
+        const button = document.querySelector(".button");
+
+        button.addEventListener("mousemove", function() 
+        {
+            result.innerHTML = result.innerHTML + "<br>" + input.value;
+            input.value = "";
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Picker</title>
+        <style type="text/css">
+            body{
+                overflow-y: hidden;
+                font-family:cursive;
+                background-color: #9d719ec5;
+            }
+            form{
+                background-color: rgb(255,255,255,0.7);
+                width: 400px;
+                margin: 10px auto;
+                padding: 90px;
+                text-align: center;
+                color: rgb(0, 0, 0);
+                border-radius: 40px 10px;
+                box-shadow: 2px 2px 7px #393939;
+            }
+            img{
+                width: 400px;
+                text-align: center;
+            }
+          </style>
+        <script>
+            function pilih(){
+                let list_bunga = document.getElementById("bunga");
+                let idx_Pilihan = list_bunga.selectedIndex;
+                console.log("Bunga Pilihan " + list_bunga[idx_Pilihan].value);
+                let area_image = document.getElementById("image");
+                if(idx_Pilihan == 0){
+                    area_image.src=""
+                    area_image.alt="";
+                }
+                if(idx_Pilihan == 1){
+                    area_image.src="image/mawar.jpg"
+                    area_image.alt="Bunga Mawar";
+                    alert("Ini Gambar Bunga Mawar");
+                }
+                else if(idx_Pilihan == 2){
+                    area_image.src="image/melati.jpg"
+                    area_image.alt="Bunga Melati";
+                    alert("Ini Gambar Bunga Melati");
+                }
+                else if(idx_Pilihan == 3){
+                    area_image.src="image/tulip.jpg"
+                    area_image.alt="Bunga Tulip";
+                    alert("Ini Gambar Bunga Tulip");
+                }
+                else if(idx_Pilihan == 4){
+                    area_image.src="image/matahari.jpg"
+                    area_image.alt="Bunga Matahari";
+                    alert("Ini Gambar Bunga Matahari");
+                }
+                else if(idx_Pilihan == 5){
+                    area_image.src="image/sakura.jpg"
+                    area_image.alt="Bunga Sakura";
+                    alert("Ini Gambar Bunga Sakura");
+                }
+                else if(idx_Pilihan == 6){
+                    area_image.src="image/daisy.jpg"
+                    area_image.alt="Bunga Daisy";
+                    alert("Ini Gambar Bunga Daisy");
+                }
+                else if(idx_Pilihan == 7){
+                    area_image.src="image/anggrek.png"
+                    area_image.alt="Bunga Anggrek";
+                    alert("Ini Gambar Bunga Anggrek");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Image Picker</h1>
+        <hr>
+        <form id="form1">
+            Pilihan Jenis Bunga :  <select id="bunga" onchange="pilih()">
+                <option value="">--- Pilih ---</option>
+                <option value="mawar">Mawar</option>
+                <option value="melati">Melati</option>
+                <option value="tulip">Tulip</option>
+                <option value="matahari">Matahari</option>
+                <option value="sakura">Sakura</option>
+                <option value="daisy">Daisy</option>
+                <option value="anggrek">Anggrek</option>
+            </select>
+
+            <img id="image" src="" alt="">
+        </form>
+        <br>
+    </body>
+</html>

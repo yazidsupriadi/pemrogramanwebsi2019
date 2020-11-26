@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Form Validation</h1>
+    <form name="FormValidation" action="" method="" onsubmit="return validasi()">
+        <table>
+            <tr>
+                <td><label for="nama">Nama Pelanggan</label></td>
+                <td>:</td>
+                <td><input type="text" id="nama" placeholder="Masukkan Nama Anda" class="form-control" maxlength="30" size="25" required=""></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td>:</td>
+                <td><input type="email" id="email" placeholder="Masukkan Email Anda" size="25" required=""></td>
+            </tr>
+            <tr>
+                <td><label for="jam">Jam Keberangkatan</label></td>
+                <td>:</td>
+                <td><input type="time" id="jam" required=""></td>
+            </tr>
+
+            <tr>
+                <td><label for="tujuan">Tujuan Keberangkatan</label></td>
+                <td>:</td>
+                <td><input type="text" id="tujuan" placeholder="Masukkan Tujuan Anda" size="25" required=""></td>
+            </tr>
+            <tr>
+                <td><label for="jumlah">Jumlah Tiket</label></td>
+                <td>:</td>
+                <td><input type="number" id="jumlah" placeholder="Jumlah Tiket Anda" class="form-control" min="1" max="10" required=""></td>
+            </tr>
+                <td><input type="submit" value="Kirim" onclick="validasi()"></td>
+        </table>
+        <hr>
+        <br>
+    </form>
+
+    <div>
+        <p id="nama_pelanggan"></p>
+        <p id="email_pelanggan"></p>
+        <p id="jam_keberangkatan"></p>
+        <p id="tujuan_keberangkatan"></p>
+        <p id="jumlah_tiket"></p>
+    </div>
+    
+    <script>
+        function validasi(){
+            let nama = document.getElementById("nama").value;
+            let email = document.getElementById("email").value;
+            let jam = document.getElementById("jam").value;
+            let tujuan = document.getElementById("tujuan").value;
+            let jumlah = document.getElementById("jumlah").value;
+
+            if (nama == "") {
+                alert("Nama Belum Diisi");
+                document.FormValidation.nama;
+                return false;
+            } if (email == "") {
+                alert("Email Belum diisi");
+                document.FormValidation.email;
+                return false;
+            } if (jam == "") {
+                alert("Jam Keberangkatan Belum Diisi");
+                document.FormValidation.jam;
+                return false;
+            } if (tujuan == "") {
+                alert("Tujuan Keberangkatan Belum Diisi");
+                document.FormValidation.tujuan;
+                return false;
+            } if (jumlah == "") {
+                alert("Jumlah Tiket Belum Diisi");
+                document.FormValidation.jumlah;
+                return false;
+            } else{
+                document.getElementById("nama_pelanggan").innerHTML = "Nama : " + nama;
+                document.getElementById("email_pelanggan").innerHTML = "Email : " + email;
+                document.getElementById("jam_keberangkatan").innerHTML = "Jam : " + jam;
+                document.getElementById("tujuan_keberangkatan").innerHTML = "Tujuan : " + tujuan;
+                document.getElementById("jumlah_tiket").innerHTML = "Jumlah : " + jumlah;
+                return false;
+            }
+        }
+    </script>
+</html>
