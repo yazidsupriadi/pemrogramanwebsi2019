@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script language="JavaScript">
+        function validasi(){
+            let username = document.getElementById("nama").value;
+            let password = document.getElementById("pass").value;
+
+            if ( username == "ahmad2017" && password == "integrity"){
+                alert("Login Sukses");
+                window.location = "sukses.html";
+                return true
+            } else{
+                alert("Login Gagal");
+                return false
+                }
+        }
+    </script>
+</head>
+<body>
+    <style>
+        body{font: 14px verdana;}
+        .wrapper{width: 350px; padding: 20px}
+        .kotak{width: auto; margin: auto;}
+    </style>
+    <form action="login.html"></form>
+    <fieldset>
+        <legend align="center"><h1>Login</h1></legend>
+        <table align="center" cellpadding="10">
+            <div class="kotak">
+            <tbody>
+                <tr>
+                    <td><label for="name">Username</label>&ensp;<input type="text" name="username" id="nama"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password </label>&ensp;<input type="password" name="password" id="pass"></td>
+                </tr>
+                <tr>
+                    <td align="center"><input type="button" name="submit" id="submit" value="Submit" onclick="validasi()"></td>
+                </tr>
+            </tbody>
+            </div>
+        </table>
+    </fieldset>
+
+</body>
+</html>
