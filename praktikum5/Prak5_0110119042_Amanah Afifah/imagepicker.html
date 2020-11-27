@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <style>
+        .container{
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-items: start;
+            background-color: sandybrown;
+            gap: 5px;
+            width: 50%;
+            margin: 30px auto;
+        }
+        select{
+            width: 170px;
+        }
+    </style>
+</head>
+<body style="background-color: saddlebrown">
+    <div class="container">
+        <h2>Image Picker</h2>
+        <select id="mySelect" onchange="pickimage()">
+            <option value="#">Pick Image Down Below!</option>
+            <option value="skincare.jpg">skincare</option>
+            <option value="makeup.jpg">makeup</option>
+            <option value="lipcare.jpg">lipcare</option>
+            <option value="haircare.jpg">haircare</option>
+            <option value="nailcare.png">nailcare</option>
+          </select>
+    
+        <img src="" alt="" width="80%" height="80%" id="image">
+    
+    <script>
+        function pickimage(){
+            var y = document.getElementById("mySelect").value;
+            var x = document.getElementById("image").src = "image/"+y;
+            alert(y);  
+        }
+    </script>
+</body>
+</html>

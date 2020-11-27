@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Message</title>
+</head>
+<body style="background-color:violet">
+    <h2 align="center">Chat Message</h2>
+    <style>
+        table{
+            position: fixed;
+            right: 2%;
+            border-bottom-left-radius: 25;
+            transform: scale(1);
+            box-shadow: 10px 5px brown;
+            bottom: 2%;
+            width: 400px;
+            height: 60px;
+            background-color: lightsalmon;
+        }
+        #cm{
+            border: 1px solid black;
+            display: flex;
+            align-items: flex-start;
+
+            justify-content: flex-start;
+            height: 200px;
+        }
+        
+        p {
+            color: black;
+            text-indent: 30px;
+        }
+    </style>
+    <p><h3 align="center"> Ini adalah halaman Chat. Kamu bisa mengirim pesan melalui chat box yang ada di sebelah kanan bawah.</h3></p>
+    <table>
+        <tr>
+            <td id="cm">
+            </td>
+        </tr>
+        <tr>
+            <td >
+                <input type="text" id="chatmessage" style="width: 70%;">
+                <input type="button" id="btn_send" value="Send" onclick="textme()" style="width: 26%;" position="right;">
+            </td>
+        </tr>
+    </table>
+    <script>
+        function textme(){
+            document.getElementById('cm').innerHTML += document.getElementById("chatmessage").value +  "<br>";
+        }
+    </script>
+</body>
+</html> 

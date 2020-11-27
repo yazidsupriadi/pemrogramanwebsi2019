@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form Validation</title>
+</head>
+
+<body style="background-color: lightsalmon;">
+    <h1 align="center">Form Validation</h1>
+    <hr>
+    <form name="RegistrationForm" action="" method="POST" onsubmit="return FormValidation()">
+        <div class="form-group">
+            <label>Nama</label>
+            <input type="text" name="nama" placeholder="Nama Lengkap" class="form-control" maxlength="30" required>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Email Anda" class="form-control" required>
+            <small id="emailHelp" value="text" class="form-text text-muted email" style="display: none;">Not Valid</small>
+        </div>
+        <div class="form-group">
+            <label>Jam Keberangkatan</label>
+            <input type="time" name="time" placeholder="Jam" class="form-control" min="00:00" max="23.59" required>
+        </div>
+        <div class="form-group">
+            <label>Tujuan Keberangkatan</label>
+            <input type="text" name="tujuan" placeholder="Tujuan" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>Jumlah Tiket</label>
+            <input type="number" name="jumlah" placeholder="Jumlah" class="form-control" min="0" max="10" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+    <br>
+    <hr>
+    <div class="alert alert-success" role="alert">
+        <h3 class="alert-heading">Ticket Receipt</h3>
+        <p id="Nama"></p>
+        <p id="Email"></p>
+        <p id="Jam"></p>
+        <p id="Destination"></p>
+        <p id="Amount"></p>
+
+    </div>
+    <script>
+        function FormValidation() {
+            var Nama = document.forms["RegistrationForm"]["nama"].value;
+            var Email = document.forms["RegistrationForm"]["email"].value;
+            var Jam = document.forms["RegistrationForm"]["time"].value;
+            var Tujuan = document.forms["RegistrationForm"]["tujuan"].value;
+            var Jumlah = document.forms["RegistrationForm"]["jumlah"].value;
+
+            if (Nama == "") {
+                alert("Cannot be Empty!");
+                document.forms["RegistrationForm"]["nama"].focus();
+                return false;
+            }
+            if (Email == "") {
+                alert("");
+                document.forms["RegistrationForm"]["email"].focus();
+                return false;
+            }
+            if (Jam == "") {
+                alert("");
+                document.forms["RegistrationForm"]["jam"].focus();
+                return false;
+            }
+            if (Tujuan == "") {
+                alert("");
+                document.forms["RegistrationForm"]["tujuan"].focus();
+                return false;
+            }
+            if (Jumlah == "") {
+                alert("");
+                document.forms["RegistrationForm"]["jumlah"].focus();
+                return false;
+            } else {
+
+                document.getElementById("Nama").innerHTML = "Nama Pelanggan: " + document.forms["RegistrationForm"]["nama"].value;
+                document.getElementById("Email").innerHTML = "E-mail : " + document.forms["RegistrationForm"]["email"].value;
+                document.getElementById("Jam").innerHTML = "Jam Keberangkatan : " + document.forms["RegistrationForm"]["time"].value;
+                document.getElementById("Destination").innerHTML = "Tujuan Keberangkatan : " + document.forms["RegistrationForm"]["tujuan"].value;
+                document.getElementById("Amount").innerHTML = "Jumlah Tiket : " + document.forms["RegistrationForm"]["jumlah"].value;
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>

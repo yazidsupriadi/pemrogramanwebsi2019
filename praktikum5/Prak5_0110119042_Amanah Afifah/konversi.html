@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Mata Uang</title>
+   
+    <style>
+        table{
+            position:sticky;
+            margin: 10% auto;
+            border: 1px solid brown;
+        }
+        thead{
+            text-align: center;
+            font-size: 17px;
+            background-color: salmon;
+        }
+    </style>
+</head>
+<body style="background-color: lightsalmon;">
+    <h2 align="center">Konversi Mata Uang Asing</h2>
+    <table>
+        <thead>
+            <td>Masukkan Nilai</td>
+            <td>Valas</td>
+            <td>Nilai Rupiah</td>
+        </thead>
+        <tbody>
+            <td> <input type="text" id="A" onchange="Funct()" onmousemove="Funct()" /> </td>
+            <td> 
+                <select id="Kurs" onchange="Funct()" onmousemove="Funct()">
+                    <option value="9.915">USD</option>
+                    <option value="13.472">SGD</option>
+                    <option value="874">MYR</option>
+                    <option value="120">JPY</option>
+                    <option value="15.888">EUR</option>
+                    <option value="3.592">SAR</option>
+                </select>     
+            </td>
+            <td>
+                <input type="text" id="F" value="Rp.0" />   
+            </td>
+        </tbody> 
+    </table>
+
+    <script>
+        function Funct() {
+            var insert = document.getElementById("A").value;
+            var get = document.getElementById("Kurs").value;
+            document.getElementById("F").value = "Rp. " + Number( get * insert );
+        }
+    </script>
+</body>
+</html> 
