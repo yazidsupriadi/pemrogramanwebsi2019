@@ -23,11 +23,9 @@
             border: 1px solid black;
             display: flex;
             align-items: flex-start;
-
             justify-content: flex-start;
             height: 200px;
         }
-        
         p {
             color: black;
             text-indent: 30px;
@@ -36,8 +34,7 @@
     <p><h3 align="center"> Ini adalah halaman Chat. Kamu bisa mengirim pesan melalui chat box yang ada di sebelah kanan bawah.</h3></p>
     <table>
         <tr>
-            <td id="cm">
-            </td>
+            <td id="cm"></td>
         </tr>
         <tr>
             <td >
@@ -48,7 +45,7 @@
     </table>
     <script>
         function textme(){
-            document.getElementById('cm').innerHTML += document.getElementById("chatmessage").value +  "<br>";
+            document.getElementById('cm').innerHTML += document.getElementById("chatmessage").value + "<br>";
         }
     </script>
 </body>
