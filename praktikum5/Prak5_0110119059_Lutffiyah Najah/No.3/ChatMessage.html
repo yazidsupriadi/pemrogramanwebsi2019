@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Message</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        #ChatBox {
+            height: 500px;
+            width: 800px;
+            position: relative;
+            margin: 10px;
+            border: 1px solid black;
+            background-color: skyblue;
+        }
+        
+        .input {
+            padding: 2px;
+            bottom: 0px;
+            position: absolute;
+            width: 100%;
+        }
+        
+        #text {
+            width: 85%;
+            line-height: 20px;
+        }
+        
+        #kirim {
+            width: 14%;
+            height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id=ChatBox>
+        <p>Selamat pagi, selamat datang di Alfamart</p>
+        <div class="input">
+            <input type="text" id="text">
+            <input type="button" value="kirim" id="kirim" id="kirim" onclick="kirim()">
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
