@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+
+    <style>
+       table{
+        margin: 200px auto;
+        font-size: 18px;
+        height: 100px;
+        background-color: aliceblue;
+        font-family: monospace;
+        border: 3px solid black;
+       }
+
+    </style>
+
+</head>
+<body>  
+    <table>
+        <caption>Kurs Mata Uang Rupiah</caption>
+        <thead>
+            <th id="">Masukkan Nilai</th>
+            <th id="">Valas</th>
+            <th id="">Nilai Rupiah</th>
+        </thead>
+        <tbody>
+            <td><input type="number" id="masuk" placeholder="Masukkan Jumlah" onkeyup="kurs()"></td>
+            <td>
+                <select id="pilih" onkeyup="kurs()">
+                    <option value="9.915">1 Dollar US - Rp 9.915 </option>
+                    <option value="13.472">1 Dollar Singapore - Rp 13.472</option>
+                    <option value="874">1 Ringgit Malaysia - Rp 874</option>
+                    <option value="120">1 Yen Jepang - Rp 120</option>
+                    <option value="15.888">1 Euro - Rp 15.888</option>
+                    <option value="3.592">1 Riyal Arab Saudi - Rp 3.592</option>
+                </select>
+            </td>
+            <td><input type="text" id="hsl" value="Rp.0"></td>
+        </tbody>      
+    </table>
+    
+    
+    
+    <script>
+        function kurs() {
+            const msk = document.getElementById("masuk").value;
+            const plh = document.getElementById("pilih").value;
+            document.getElementById("hsl").value = "Rp. " + msk * plh;   
+        }
+
+    </script>
+
+</body>
+</html>

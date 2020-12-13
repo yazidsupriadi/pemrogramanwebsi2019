@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+</head>
+<style>
+    body {
+        background-color: aliceblue;
+        color: black;
+    }
+
+    .result-chat {
+        width : 500px;
+        height: 300px;
+        border: 1px solid black;
+        margin-bottom: 1rem;
+        overflow: auto;
+    }
+</style>
+
+<body>
+    <main>
+        <h1>Selamat Datang di Program Chat Box</h1>
+        <br/><br/>
+        <div class="result-chat">
+        </div>
+        <div>
+            <input type="text" class="input-chat">
+            <button class="btn-chat" >Send</button>
+        </div>
+    </main>
+
+    <script>
+        let resultChat = document.querySelector(".result-chat");
+        const inputChat = document.querySelector(".input-chat");
+        const btnChat = document.querySelector(".btn-chat");
+
+        btnChat.addEventListener("click", function() {
+            resultChat.innerHTML = resultChat.innerHTML + "<br/>"  + inputChat.value;
+            inputChat.value = "";
+        })
+    </script>
+
+</body>
+</html>

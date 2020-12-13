@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    <h1>Selamat Datang di Program Image Picker</h1>
+    <br/><br/>
+    <div>
+        Pilih Bunga  : <select id="bunga" onchange="pilih()">
+            <option value="Matahari">Matahari</option>
+            <option value="Mawar">Mawar</option>
+            <option value="Lavender">Lavender</option>
+            <option value="Melati">Melati</option>
+            <option value="Tulip">Tulip</option>
+            <option value="Anggrek">Anggrek</option>
+        </select>
+    </div>
+    <br/>
+    <div>
+        <img id="image" src="image/matahari.jpg" alt="">
+    </div>
+
+    <script>
+        function pilih(){
+            let list = document.getElementById("bunga");
+            let index = list.selectedIndex;
+            let gambar = document.getElementById("image");
+
+            if (index == 0){
+
+                gambar.src= "image/matahari.jpg" 
+                gambar.alt = "Matahari";
+                alert("Ini gambar Matahari");
+            }
+
+            if (index == 1){
+                gambar.src= "image/mawar.jpg" 
+                gambar.alt = "Mawar";
+                alert("Ini gambar Mawar");
+            }
+
+            if (index == 2){
+                gambar.src= "image/lavender.jpg" 
+                gambar.alt = "Lavender";
+                alert("Ini gambar Lavender");
+            }
+
+            if (index == 3){
+                gambar.src= "image/melati.jpg" 
+                gambar.alt = "Melati";
+                alert("Ini gambar Melati");
+            }
+
+            if (index == 4){
+                gambar.src= "image/tulip.jpg" 
+                gambar.alt = "Tulip";
+                alert("Ini gambar Tulip");
+            }
+
+            if (index == 5){
+                gambar.src= "image/anggrek.jpg" 
+                gambar.alt = "Anggrek";
+                alert("Ini gambar Anggrek");
+            }
+
+
+
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>
