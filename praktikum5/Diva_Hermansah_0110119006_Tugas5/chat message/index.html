@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat box</title>
+    <style>
+        #view1 {
+            background: linear-gradient(to bottom, #33ccff 0%, #9966ff 100%);
+            height: 500px;
+            width: 300px;
+            overflow: scroll;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <center>
+        <div id="view1"></div>
+        <div id="persona">
+            <input type="text" id="person1" value="Tess tes" />
+            <button id="chat1" onclick="selfie1()">Person 1</button>
+        </div>
+        <div id="personb">
+            <input type="text" id="person2" value="Tess 1..2..3.." />
+            <button id="chat1" onclick="selfie2()">Person 2</button>
+        </div>
+    </center>
+</body>
+<script>
+    function selfie1(){
+        var a = document.getElementById("person1").value;
+        var para1 = document.createElement("div");
+        para1.style.backgroundColor= "lightgrey";
+        para1.style.width="100px";
+        para1.style.padding ="10px";
+        para1.style.float ="left";
+        para1.style.clear = "both";
+        para1.style.margin = "5px";
+        para1.style.borderRadius = "10px";
+        var node = document.createTextNode(a);
+        para1.appendChild(node);	
+        var x = document.getElementById("view1");
+        x.appendChild(para1);
+    }
+    
+    function selfie2(){
+        var b = document.getElementById("person2").value;
+        var para2 = document.createElement("div");
+        para2.style.backgroundColor= "lightgrey";
+        para2.style.width="100px";
+        para2.style.padding ="10px";
+        para2.style.float ="right";
+        para2.style.clear = "both";
+        para2.style.margin = "5px";
+        para2.style.borderRadius = "10px";
+        var node = document.createTextNode(b);
+        para2.appendChild(node);	
+        var x = document.getElementById("view1");
+        x.appendChild(para2);
+    }
+</script>
+</html>

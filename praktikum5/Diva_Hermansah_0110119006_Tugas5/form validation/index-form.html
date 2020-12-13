@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form validasi</title>
+</head>
+<body>
+    
+    <form action="#" method="" >
+        <div>
+            <label>Nama Pelanggan:</label>
+            <input type="text" name="nama" id="nama" />
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="email" name="email" id="email" />
+        </div>
+        <div>
+            <label>Jam Keberangkatan:</label>
+            <input type="time" name="email" id="jam_ber" />
+        </div>
+        <div>
+            <label>Tujuan Keberangkatan:</label>
+            <input type="text" name="email" id="tujuan_ber" />
+        </div>
+        <div>
+            <label>Jumlah Tiket:</label>
+            <input type="text" name="jumlah" id="jml_tiket" />
+        </div>
+        <div>
+            <button type="button" onclick="validasi()">Submit</button>
+        </div>
+    </form>
+    
+    <hr>
+    <p id="nama_out"></p>
+    <p id="email_out"></p>
+    <p id="jam_out"></p>
+    <p id="tujuan_out"></p>
+    <p id="jml_out"></p>
+</body>
+<script type="text/javascript">
+    function validasi() {
+        var nama = document.getElementById("nama").value;
+        document.getElementById("nama_out").innerHTML = "<b>" + nama +"</b>";
+        var email = document.getElementById("email").value;
+        document.getElementById("email_out").innerHTML = "<b>" + email +"</b>";
+        var jam_ber = document.getElementById("jam_ber").value;
+        document.getElementById("jam_out").innerHTML = "<b>" + jam_ber +"</b>";
+        var tujuan_ber = document.getElementById("tujuan_ber").value;
+        document.getElementById("tujuan_out").innerHTML = "<b>" + tujuan_ber +"</b>";
+        var jml_tiket = document.getElementById("jml_tiket").value;
+        document.getElementById("jml_out").innerHTML = "<b>" + jml_tiket +"</b>";
+        
+        
+        if (nama != "" && email!="" && jam_ber !="" && tujuan_ber !="" && jml_tiket !="") {
+            return true;
+        }else{
+            alert('Anda harus mengisi data dengan benar dan lengkap !');
+        }
+        
+    }
+</script>
+</html>
